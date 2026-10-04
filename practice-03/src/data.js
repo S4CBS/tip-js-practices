@@ -6,15 +6,15 @@ export const demoTasks = [
   { id: 10, title: "Оформить README", completed: true, priority: "medium" },
 ];
 
-// Индивидуальный вариант 1: Подготовка учебного проекта
+// Индивидуальный вариант 6: Проверка пользовательского интерфейса
 // Идентификаторы: 11, 23, 37, 41, 58, 64
-// Для Варианта 1 изначально выполнено 0 задач (K = 0)
-export const variantNumber = 1;
+// Для Варианта 6 изначально выполнено 5 задач (K = 5)
+export const variantNumber = 6;
 export const variantTasks = [
-  { id: 11, title: "Определить стек технологий", completed: false, priority: "high" },
-  { id: 23, title: "Спроектировать архитектуру приложения", completed: false, priority: "medium" },
-  { id: 37, title: "Создать прототип базы данных", completed: false, priority: "low" },
-  { id: 41, title: "Разработать модульные тесты", completed: false, priority: "medium" },
-  { id: 58, title: "Подготовить документацию API", completed: false, priority: "low" },
-  { id: 64, title: "Настроить сборку проекта", completed: false, priority: "high" },
+  { id: 11, title: "Проверить адаптивную вёрстку на мобильных устройствах", completed: true, priority: "high" },
+  { id: 23, title: "Протестировать контрастность и цветовую доступность", completed: true, priority: "medium" },
+  { id: 37, title: "Проверить валидацию полей ввода формы", completed: true, priority: "low" },
+  { id: 41, title: "Провести тестирование клавиатурной навигации", completed: true, priority: "high" },
+  { id: 58, title: "Оценить скорость отрисовки и отклик интерфейса", completed: true, priority: "medium" },
+  { id: 64, title: "Составить чек-лист пользовательского тестирования", completed: false, priority: "low" },
 ];

@@ -1,8 +1,8 @@
 "use strict";
 
-const totalTasks = 12;
-const completedTasks = 5;
-const dailyLimit = 3;
+const totalTasks = 18;
+const completedTasks = 6;
+const dailyLimit = 5;
 
 function planTasks(total, completed, limit) {
   if (

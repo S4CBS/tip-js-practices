@@ -93,22 +93,22 @@ console.log("Статус задачи id = 4 в demoTasks:", findTaskById(demoT
 console.log("Статус задачи id = 4 в currentTasks:", findTaskById(currentTasks, 4)?.completed);
 
 // -----------------------------------------------------------------
-// 2. Индивидуальный сценарий (Вариант 1: Подготовка учебного проекта)
+// 2. Индивидуальный сценарий (Вариант 6: Проверка пользовательского интерфейса)
 // -----------------------------------------------------------------
 console.log("\n==================================================");
-console.log(">>> ЧАСТЬ 2. Индивидуальный сценарий (Вариант 1) <<<");
-console.log("Тематика: Подготовка учебного проекта");
+console.log(">>> ЧАСТЬ 2. Индивидуальный сценарий (Вариант 6) <<<");
+console.log("Тематика: Проверка пользовательского интерфейса");
 console.log("==================================================");
 
 let currentVariantTasks = variantTasks;
-printStatsHeader("Этап 0: Исходный набор варианта 1", currentVariantTasks);
+printStatsHeader("Этап 0: Исходный набор варианта 6", currentVariantTasks);
 console.log("Исходные названия:", getTaskTitles(currentVariantTasks));
 
-// 1. Добавить задачу id = 80 с приоритетом high
-const varAddResult = addTask(currentVariantTasks, 80, "Развернуть тестовый стенд", "high");
+// 1. Добавить задачу id = 80 с приоритетом low (по таблице Варианта 6)
+const varAddResult = addTask(currentVariantTasks, 80, "Зафиксировать замечания дизайн-ревью", "low");
 if (varAddResult.ok) {
   currentVariantTasks = varAddResult.tasks;
-  printStatsHeader("Этап 1: Добавлена задача id = 80 (high)", currentVariantTasks);
+  printStatsHeader("Этап 1: Добавлена задача id = 80 (low)", currentVariantTasks);
 }
 
 // 2. Установить completed = true для id = 11
@@ -122,7 +122,7 @@ if (varCompleteResult.ok) {
 const varRenameResult = renameTask(
   currentVariantTasks,
   23,
-  "Спроектировать доменную модель приложения"
+  "Провести аудит цветового контраста WCAG"
 );
 if (varRenameResult.ok) {
   currentVariantTasks = varRenameResult.tasks;
@@ -137,9 +137,9 @@ if (varRemoveResult.ok) {
 }
 
 // 5. Повторно добавить id = 80 (ожидается отказ)
-const varDupResult = addTask(currentVariantTasks, 80, "Повторный стенд", "high");
+const varDupResult = addTask(currentVariantTasks, 80, "Повторная фиксация", "low");
 console.log("\nПопытка повторного добавления id = 80 -> ok:", varDupResult.ok, "| ошибка:", varDupResult.error);
 
-printStatsHeader("Итоговое состояние набора Варианта 1", currentVariantTasks);
+printStatsHeader("Итоговое состояние набора Варианта 6", currentVariantTasks);
 console.log("Итоговые идентификаторы:", currentVariantTasks.map((t) => t.id));
 console.log("Сохранность исходного variantTasks (длина 6, не мутирован):", variantTasks.length === 6);
